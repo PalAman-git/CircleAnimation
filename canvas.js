@@ -51,9 +51,11 @@ function Circle(x, y, dy, dx, radius) {
 
   this.draw = () => {
     c.beginPath();
-    c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+    c.arc(this.x, this.y, this.radius, 0, Math.PI *2, false);
     c.strokeStyle = RandomColor();
     c.stroke();
+    c.fillStyle='black';
+    c.fill()
   };
   this.update = () => {
     if (
@@ -80,12 +82,12 @@ function Circle(x, y, dy, dx, radius) {
 //creating 100 circles and storing them in the array
 let CircleArray = [];
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 200; i++) {
   let radius = 30;
   let x = Math.random() * (innerWidth - 2*radius)+radius;
   //giving random velocity
-  dx = 8* (Math.random() * -0.5);
-  dy = 8* (Math.random() * -0.5);
+  dx = 4* (Math.random() * -0.5);
+  dy = 4* (Math.random() * -0.5);
   y = Math.random() *( innerHeight - 2*radius)+radius;
   CircleArray.push(new Circle(x, y, dy, dx, radius));
 }

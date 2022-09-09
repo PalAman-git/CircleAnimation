@@ -52,8 +52,8 @@ function Circle(x, y, dy, dx, radius) {
   this.draw = () => {
     c.beginPath();
     c.arc(this.x, this.y, this.radius, 0, Math.PI *2, false);
-    c.strokeStyle = RandomColor();
-    c.stroke();
+    // c.strokeStyle = RandomColor();
+    // c.stroke();
     c.fillStyle='black';
     c.fill()
   };

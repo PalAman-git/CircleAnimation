@@ -82,11 +82,11 @@ let CircleArray = [];
 
 for (let i = 0; i < 100; i++) {
   let radius = 30;
-  let x = Math.random() * (innerWidth - 2*radius),
+  let x = Math.random() * (innerWidth - 2*radius)+radius;
   //giving random velocity
   dx = 8* (Math.random() * -0.5);
   dy = 8* (Math.random() * -0.5);
-  y = Math.random() *( innerHeight - 2*radius);
+  y = Math.random() *( innerHeight - 2*radius)+radius;
   CircleArray.push(new Circle(x, y, dy, dx, radius));
 }
 console.log(CircleArray);
